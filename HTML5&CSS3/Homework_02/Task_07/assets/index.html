@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="icon" type="img/ico" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+ <script type="text/javascript">
+
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+              var mapOptions = {
+                zoom: 11,
+    center: new google.maps.LatLng(42.698334, 23.319941), // Sofia
+    styles: [{
+                    "featureType": "all",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{
+                        "saturation": 36
+                    }, {
+                        "color": "#000000"
+                    }, {
+                        "lightness": 40
+                    }]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{
+                        "visibility": "on"
+                    }, {
+                        "color": "#000000"
+                    }, {
+                        "lightness": 16
+                    }]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.icon",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 20
+                    }]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 17
+                    }, {
+                        "weight": 1.2
+                    }]
+                }, {
+                    "featureType": "landscape",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 20
+                    }]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 21
+                    }]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 17
+                    }]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 29
+                    }, {
+                        "weight": 0.2
+                    }]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 18
+                    }]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 16
+                    }]
+                }, {
+                    "featureType": "transit",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 19
+                    }]
+                }, {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 17
+                    }]
+                }]
+            };
+  var mapElement = document.getElementById('map');
+
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(40.6700, -73.9400),
+                map: map,
+                title: 'Snazzy!'
+            });
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#sidebar-btn').click(function() {
+                $('#sidebar').toggleClass('visible');
+            })
+        })
+    </script>
+</head>
+<body>
+    <header id="main-header">
+    <div id="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Most popular</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+    <div id="sidebar-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    </div>
+        <div id="main-top">
+            <div class="wrap-content">
+                <h1 class="company-logo"><a href="#">Movies</a></h1>
+                <nav id="top-navigation">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Most popular</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
+                    </ul>
+                </nav>
+        </div>
+        </div>
+        <section id="bottom-header">
+            <div class="wrap-content">
+                <nav id="bottom-navigation">
+                    <ul>
+                        <li><a href="#">Cinema movies</a></li>
+                        <li><a href="#">Tv series</a></li>
+                        <li><a href="#">Cartoons</a></li>
+                        <li><a href="#">Anime</a></li>
+                        <li><a href="#">New movies</a></li>
+                        <li><a href="#">Hd movies</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section id="slider">
+            <img src="img/sponge_bob.jpg" alt="warcraft" />
+            <article id="slider-content">
+                <h1>The Sponge Bob Movie</h1>
+                <p> As an Orc horde invades the planet Azeroth using
+                a magic portal, a few human heroes and dissenting.<br />Orcs must attempt to stop the true evil behind thiswar.</p>
+                <ul id="slider-buttons">
+                    <li><a href="#">Learn more</a></li>
+                    <li><a href="#">Trailer</a></li>
+                </ul>
+            </article>
+            <article id="slider-bottom-images">
+                <img src="img/page-1_slide01.jpg" />
+                <img src="img/page-1_slide02.jpg" />
+                <img src="img/page-1_slide03.jpg" />
+            </article>
+        </section>
+        <section id="favourite-movies">
+            <div class="wrap-content">
+                <h1>Watch your favorite movies online</h1>
+                <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+                <form id="movie-type" action="#" method="POST">
+                    <span><input type="checkbox" name="movie-type" id="Action">
+                    <label for="Action">Action</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Adventure">
+                    <label for="Adventure">Adventure</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Animation">
+                    <label for="Animation">Animation</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Biography">
+                    <label for="Biography">Biography</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Comedy">
+                    <label for="Comedy">Comedy</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Crime">
+                    <label for="Crime">Crime</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Documentary">
+                    <label for="Documentary">Documentary</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Drama">
+                    <label for="Drama">Drama</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Family">
+                    <label for="Family">Family</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Fantasy">
+                    <label for="Fantasy">Fantasy</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Game-show">
+                    <label for="Game-show">Game-show</label></span>
+                    <span> <input type="checkbox" name="movie-type" id="History">
+                    <label for="History">History</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Horror">
+                    <label for="Horror">Horror</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Kids">
+                    <label for="Kids">Kids</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Music">
+                    <label for="Music">Music</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Musical">
+                    <label for="Musical">Musical</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Mystery">
+                    <label for="Mystery">Mystery</label></span>
+                    <span><input type="checkbox" name="movie-type" id="News">
+                    <label for="News">News</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Romance">
+                    <label for="Romance">Romance</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Sci-Fi">
+                    <label for="Sci-Fi">Sci-Fi</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Short">
+                    <label for="Short">Short</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Sport">
+                    <label for="Sport">Sport</label></span>
+                    <span><input type="checkbox" name="movie-type" id="Thriller">
+                    <label for="Thriller">Thriller</label></span>
+                    <span> <input type="checkbox" name="movie-type" id="War">
+                    <label for="War">War</label></span>
+                    <span> <input type="checkbox" name="movie-type" id="Western">
+                    <label for="Western">Western</label></span>
+            </form>
+            <div id="search-btn">
+                <a href="#">Search</a>
+            </div>
+            </div>
+        </section>
+        <section id="more-movies">
+            <div class="wrap-content">
+                <article class="movie-articles">
+                    <img src="img/more_movies/page-1_img01.jpg" />
+                    <div class="mask">
+                        <p>450<a href="#"><img src="img/eye.png" /></a></p>
+                        <p>01:27:34<a href="#"><img src="img/time.png" /></a></p>
+                        <p>367<a href="#"><img src="img/heart.png" /></a></p>
+                    </div>
+                </article>
+                <article class="movie-articles">
+                    <img src="img/more_movies/page-1_img02.jpg" />
+                    <div class="mask">
+                        <p>450<a href="#"><img src="img/eye.png" /></a></p>
+                        <p>01:27:34<a href="#"><img src="img/time.png" /></a></p>
+                        <p>367<a href="#"><img src="img/heart.png" /></a></p>
+                    </div>
+                </article>
+                <article class="movie-articles">
+                    <img src="img/more_movies/page-1_img03.jpg" />
+                    <div class="mask">
+                        <p>450<a href="#"><img src="img/eye.png" /></a></p>
+                        <p>01:27:34<a href="#"><img src="img/time.png" /></a></p>
+                        <p>367<a href="#"><img src="img/heart.png" /></a></p>
+                    </div>
+                </article>
+                <article class="movie-articles">
+                    <img src="img/more_movies/page-1_img04.jpg" />
+                    <div class="mask">
+                        <p>450<a href="#"><img src="img/eye.png" /></a></p>
+                        <p>01:27:34<a href="#"><img src="img/time.png" /></a></p>
+                        <p>367<a href="#"><img src="img/heart.png" /></a></p>
+                    </div>
+                </article>
+                <article class="movie-articles">
+                    <img src="img/more_movies/page-1_img05.jpg" />
+                    <div class="mask">
+                        <p>450<a href="#"><img src="img/eye.png" /></a></p>
+                        <p>01:27:34<a href="#"><img src="img/time.png" /></a></p>
+                        <p>367<a href="#"><img src="img/heart.png" /></a></p>
+                    </div>
+                </article>
+                <article class="movie-articles">
+                    <img src="img/more_movies/page-1_img06.jpg" />
+                    <div class="mask">
+                        <p>450<a href="#"><img src="img/eye.png" /></a></p>
+                        <p>01:27:34<a href="#"><img src="img/time.png" /></a></p>
+                        <p>367<a href="#"><img src="img/heart.png" /></a></p>
+                    </div>
+                </article>
+                <article class="movie-articles">
+                    <img src="img/more_movies/page-1_img07.jpg" />
+                    <div class="mask">
+                        <p>450<a href="#"><img src="img/eye.png" /></a></p>
+                        <p>01:27:34<a href="#"><img src="img/time.png" /></a></p>
+                        <p>367<a href="#"><img src="img/heart.png" /></a></p>
+                    </div>
+                </article>
+                <article class="movie-articles">
+                    <img src="img/more_movies/page-1_img08.jpg" />
+                    <div class="mask">
+                        <p>450<a href="#"><img src="img/eye.png" /></a></p>
+                        <p>01:27:34<a href="#"><img src="img/time.png" /></a></p>
+                        <p>367<a href="#"><img src="img/heart.png" /></a></p>
+                    </div>
+                </article>
+                <article class="movie-articles">
+                    <img src="img/more_movies/page-1_img09.jpg" />
+                    <div class="mask">
+                        <p>450<a href="#"><img src="img/eye.png" /></a></p>
+                        <p>01:27:34<a href="#"><img src="img/time.png" /></a></p>
+                        <p>367<a href="#"><img src="img/heart.png" /></a></p>
+                    </div>
+                </article>
+                <article class="movie-articles">
+                    <img src="img/more_movies/page-1_img10.jpg" />
+                    <div class="mask">
+                        <p>450<a href="#"><img src="img/eye.png" /></a></p>
+                        <p>01:27:34<a href="#"><img src="img/time.png" /></a></p>
+                        <p>367<a href="#"><img src="img/heart.png" /></a></p>
+                    </div>
+                </article>
+                <article class="movie-articles">
+                    <img src="img/more_movies/page-1_img11.jpg" />
+                    <div class="mask">
+                        <p>450<a href="#"><img src="img/eye.png" /></a></p>
+                        <p>01:27:34<a href="#"><img src="img/time.png" /></a></p>
+                        <p>367<a href="#"><img src="img/heart.png" /></a></p>
+                    </div>
+                </article>
+                <article class="movie-articles">
+                    <img src="img/more_movies/page-1_img12.jpg" />
+                    <div class="mask">
+                        <p>450<a href="#"><img src="img/eye.png" /></a></p>
+                        <p>01:27:34<a href="#"><img src="img/time.png" /></a></p>
+                        <p>367<a href="#"><img src="img/heart.png" /></a></p>
+                    </div>
+                </article>
+                <div class="view-more-btn">
+                    <a href="#">View more</a>
+                </div>
+            </div>
+        </section>
+        <section id="slides">
+            <div class="wrap-content">
+                <h1>Testimonials</h1>
+                <div class="img-slides">
+                    <span><a class="glyphicon glyphicon-chevron-left" href="#"></a></span>
+                    <div class="circle">
+                         <img src="img/page-1_img19.jpg" />
+                    </div>
+                    <span><a class="glyphicon glyphicon-chevron-right" href="#"></a></span>
+                </div>
+                <h2>James B. <br />Movie fan</h2>
+                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
+            </div>
+        </section>
+        <section id="mail">
+            <div class="wrap-content">
+                <h1>Mail us</h1>
+                <form id="mail-form" action="" method="POST">
+                    <input type="text" placeholder="Your name" />
+                    <input type="email" placeholder="Your Email" />
+                    <textarea placeholder="Your Message"></textarea>
+                    <button class="submit-btn">Send</button>
+                </form>
+            </div>
+        </section>
+        <section id="map"></section>
+    </main>
+    <footer id="footer">
+
+    </footer>
+</body>
+</html>

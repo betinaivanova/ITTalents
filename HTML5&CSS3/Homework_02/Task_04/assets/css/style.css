@@ -1,0 +1,42 @@
+#wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+#header {
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: 80px;
+    height: 100%;
+    background-color: #487e7e; 
+}
+#main {
+    margin-bottom: 10px;
+    width: 100%;
+}
+#left-side-section {
+    float: left;
+    margin-right: 1%;
+    width: 29%;
+    min-height: 500px;
+    height: 100%;
+    background-color: #d901ae;
+}
+#right-side-section {
+    float: right;
+    margin-left: 1%;
+    width: 69%;
+    min-height: 500px;
+    height: 100%;
+    background-color: #4aff00; 
+}
+#footer {
+    width: 100%;
+    min-height: 80px;
+    height: 100%;
+    background-color: #0248ff; 
+}
+#main:after {
+    content: "";
+    display: block;
+    clear: both;
+}

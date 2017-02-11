@@ -1,0 +1,43 @@
+#wrapper {
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+}
+#header {
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: 30px;
+    height: 100%;
+    background-color: #010066;
+}
+#content {
+    margin-bottom: 10px;
+    width: 100%;
+}
+#left-aside-bar {
+    float: left;
+    margin-right: 1%;
+    width: 29%;
+    min-height: 520px;
+    height: auto;
+    background-color: #81007f;
+}
+#main-content {
+    float: right;
+    margin-left: 1%;
+    width: 69%;
+    min-height: 520px;
+    height: auto;
+    background-color: #008001;
+}
+#content:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#footer {
+    width: 100%;
+    min-height: 30px;
+    height: 100%;
+    background-color: #010066;
+}
