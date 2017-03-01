@@ -1,0 +1,21 @@
+<script>
+
+    do {
+        var n = Number(prompt("Vavedete chislo n: "));
+        var m = Number(prompt("Vavedete chislo m: "));
+
+    } while((n < 10 || n > 5555) || (m < 10 || m > 5555))
+    if(n > m) {
+        var tmp = n;
+        n = m;
+        m = tmp;
+    }
+    var printNumbers = " ";
+    for(var numbers = m; numbers >= n; numbers--) {
+        if(numbers % 50 == 0) {
+            printNumbers = printNumbers + numbers + ", ";
+        }
+    }
+    alert(printNumbers);
+
+</script>

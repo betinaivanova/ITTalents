@@ -1,0 +1,20 @@
+<script>
+
+var arraySize = 4;
+var arrayOfNumbers = new Array(arraySize);
+var isMirror = true;
+var index = 0;
+do {
+    arrayOfNumbers[index] = prompt("Vavedete " + index + " - q element:" );
+    index++;
+} while(index < arraySize);
+for(index = 0; index <= arrayOfNumbers.length; index++){
+    if(arrayOfNumbers[index] != arrayOfNumbers[arrayOfNumbers.length - index - 1]){
+        isMirror = false;
+        break;
+    }
+}
+if(isMirror) {
+    alert("Masiva e ogledalen.")
+}
+</script>
