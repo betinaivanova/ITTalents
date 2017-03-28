@@ -1,0 +1,118 @@
+/*** OVERRIDES ***/
+
+body {
+	width: 100%;
+	font-size: 87.5%;
+	font-family: 'Nova Oval', cursive;
+	background-color: #1f253d;
+}
+img {
+	max-width: 100%;
+}
+input {
+	outline: none;
+	border: none;
+}
+button {
+	outline: none !important;
+}
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/*** INDEX.html ***/
+
+#register {
+    margin: 100px auto;
+    width: 300px;
+    padding: 20px;
+    width: 300px;
+    height: auto;
+    background-color: #394264;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+}
+
+#registration-user {
+    color: #fff;
+}
+#registration-user > input {
+    position: relative;
+    margin-top: 20px;
+    padding-left: 35px;
+    width: 250px;
+    height: 40px;
+    display: block;
+    background-color: #50597b;
+    border: 1px solid #1f253d;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #fff;
+}
+#registration-user > span.msg-box {
+    position: relative;
+    left: -109px;
+    top: 47px;
+    color: #8a93b1;
+    z-index: 100;
+}
+#registration-user > span.pass {
+    position: relative;
+    left: -109px;
+    top: 47px;
+    color: #8a93b1;
+    z-index: 100;
+}
+#registration-user > a.btn {
+    margin: 30px auto;
+    display: block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #e64c65;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+#registration-user > div.error-box  {
+	position: relative;
+}
+#registration-user > div.error-box > span.error {
+    position: relative;
+    top: -26px;
+    left: 104px;
+    color: #CC0000;
+    z-index: 100;
+}
+#registration-user > div.error-box > p.error-text {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    color: #CC0000;
+    position: relative;
+    top: 10px;
+	left: 5px;
+    z-index: 100;
+}
+#registration-user > div.success-box  {
+	position: relative;
+}
+#registration-user > div.success-box > span.success{
+    position: relative;
+    top: -26px;
+    left: 104px;
+    color: #89bb65;
+    z-index: 100;
+}
+#registration-user > div.success-box > p.success-text {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    color: #89bb65;
+    position: relative;
+    top: 10px;
+	left: -90px;
+    z-index: 100;
+    text-align: center;
+}
