@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        #canvas-house {
+            background-color: red;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+  <div id="wrapper">
+      <canvas id="canvas-house" width="400" height="400">
+
+      </canvas>
+
+  </div>
+</body>
+<script>
+    var canvas = document.getElementById('canvas-house');
+    var ctx = canvas.getContext('2d');
+    function House(x,y,floors) {
+        this.x = x;
+        this.y = y;
+        this.floors = floors;
+        this.floorHeight = 40;
+        this.floorWidth = 90;
+    }
+    House.prototype.draw = function() {
+        for(var floor = 0; floor < this.floors; floor++) {
+            var floorY = this.y + (floor * this.floorHeight);
+            ctx.strokeRect(this.x + 3 * (this.floorWidth / 4),floorY + this.floorHeight / 3, w,w);
+
+            var w = 0.3333 * this.floorHeight;
+            ctx.strokeRect(this.x + 3 * (this.floorWidth / 4),floorY + this.floorHeight / 3, w,w);
+        }
+    }
+    var h = new House(30,30,8);
+    h.draw();
+</script>
+</html>

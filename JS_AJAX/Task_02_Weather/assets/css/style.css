@@ -1,0 +1,12 @@
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-Regular.ttf')
+}
+body {
+    font-size: 87.5%;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+#wrapper {
+    width: 500px;
+    margin: 0 auto;
+}

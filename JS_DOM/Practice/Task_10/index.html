@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task - 01 - ID</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div id="wrapper"
+
+  </div>
+
+</body>
+<script>
+  var img1 = document.createElement('img');
+  img1.src = "assets/img/1.png";
+  document.getElementById("wrapper").appendChild(img1);
+  var img2 = document.createElement('img');
+  img2.src = "assets/img/2.png";
+  document.getElementById("wrapper").appendChild(img2);
+  var img3 = document.createElement('img');
+  img3.src = "assets/img/3.png";
+  document.getElementById("wrapper").appendChild(img3);
+  var images = document.getElementsByTagName('img');
+  for(var index = 0; index < images.length; index++) {
+    images[index].addEventListener('mouseout',size);
+  }
+  function size() {
+    images.style.width = 200 + 'px';
+    images.style.height = 200 + 'px';
+
+  }
+</script>
+</html>

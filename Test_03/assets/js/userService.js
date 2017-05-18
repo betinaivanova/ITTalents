@@ -4,6 +4,10 @@ var userManager = (function() {
         this.password = password;
     }
 
+    function FavouriteMovie(title) {
+        this.title = title;
+    }
+
     // var users = [];
     var users = JSON.parse(window.localStorage.getItem('users')) || [];
  
@@ -12,6 +16,13 @@ var userManager = (function() {
     return {
         createUser : function(email,password) {
             return new User(email,password);
+        },
+        createFavouriteMovie : function(title) {
+            return new FavouriteMovie(title);
+        },
+        addFavouriteMovie : function(title) {
+            users.push(this.createFavouriteMovie(title));
+            window.localStorage.setItem('users', JSON.stringify(users));
         },
 
         addUser : function(email,password) {

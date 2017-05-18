@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task - 01 - ID</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body onload="show(cards)">
+
+</body>
+<script>
+var cards = [
+  ['.','@','.','.','@'],
+  ['@','@','.','.','@'],
+  ['@','.','@','.','@'],
+  ['.','@','.','@','.'],
+  ['.','@','@','@','@']
+];
+  function show(cards) {
+    var div = document.createElement('div');
+    document.body.appendChild(div);
+    div.className = 'main-div';
+   
+    for(var row = 0; row < cards.length; row++) {
+      for(var col = 0; col < cards[row].length; col++) {
+        if(cards[row][col] == '.') {
+           var divBox = document.createElement('div');
+           div.appendChild(divBox);
+           divBox.className = 'box';
+           var img = document.createElement('img');
+           divBox.appendChild(img);
+           img.src = 'assets/img/grass.png';
+        } else {
+            var divBox = document.createElement('div');
+           div.appendChild(divBox);
+           divBox.className = 'box';
+           var img = document.createElement('img');
+           divBox.appendChild(img);
+           img.src = 'assets/img/egg.png';
+        }  
+      }
+    }
+  }
+  
+</script>
+</html>

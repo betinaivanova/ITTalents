@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task - 01 - ID</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div id="wrapper"></div>
+</body>
+<script>
+function Person(name,age,url) {
+  this.name = name;
+  this.age = age;
+  this.url = url;
+}
+function display(person) {
+  var parent = document.createElement('div');
+  parent.className = "user";
+  var container = document.getElementById('wrapper');
+  container.appendChild(parent);
+  var images = document.createElement('img');
+  images.className = "img";
+  images.src = person.url;
+  parent.appendChild(images);
+  var divs = document.createElement('div');
+  divs.className = "info";
+  parent.appendChild(divs);
+  var name = document.createElement('h1');
+  var nameText = document.createTextNode(person.name);
+  name.appendChild(nameText);
+  divs.appendChild(name);
+  var age = document.createElement('p');
+  var ageText = document.createTextNode(person.age);
+  age.appendChild(ageText);
+  divs.appendChild(age);
+}
+var dragan = new Person("Dragan",24,"assets/img/1.png");
+display(dragan);
+var petkan = new Person("Petkan",20,"assets/img/2.png");
+display(petkan);
+</script>
+</html>

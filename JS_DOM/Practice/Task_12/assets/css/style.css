@@ -1,0 +1,103 @@
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-Regular.ttf')
+}
+body {
+    font-size: 87.5%;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+#wrapper {
+    margin: 50px auto;
+    width: 600px;
+    height: auto;
+}
+#login > div.login-register{
+	margin: 30px auto;
+	width: 400px;
+	height: 450px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 3px 3px 2px #dedede;
+	display: flex;
+  	justify-content: center;
+}
+div.login-register > form {
+	padding-top: 30px;
+	text-align: center;
+}
+div.login-register > form > fieldset > legend {
+	margin-bottom: 40px;
+	font-size: 2em;
+	color: #999999;
+}
+div.login-register > form > fieldset > label {
+	display: block;
+	margin-bottom: 20px;
+	font-size: 1.2em;
+	color: #404040;
+}
+div.login-register > form > fieldset > input {
+	padding-left: 10px;
+	display: block;
+	margin-bottom: 20px;
+	width: 320px;
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid #bbbbbb;
+	box-sizing: border-box;
+}
+div.login-register > form > fieldset > input#login-email {
+	position: relative;
+}
+div.login-register > form > fieldset > div.error-box > span.error {
+	position: relative;
+	top: -45px;
+	left: 135px;
+	color: #CC0000;
+}
+div.login-register > form > fieldset > div.error-box > p.error-text {
+	margin-top: -20px;
+	margin-bottom: 20px;
+	margin-left: -191px;
+	color: #CC0000;
+}
+div.login-register > form > fieldset > input:hover {
+	border: 1px solid #888888;
+}
+div.login-register > form > fieldset > input#continue-btn {
+	border: none;
+	background-color: #0068b5;
+	color: #efffff;
+}
+div.login-register > form > fieldset > input#continue-btn:hover {
+	background-color: #115A8E;
+}
+div.login-register > form > p {
+	line-height: 1.3em;
+}
+div.login-register > form > p:last-child {
+	margin-top: 20px;
+	color: #999999;
+}
+#login >  a {
+	display: inline-block;
+	width: 100%;
+	color: #0068b5;
+	text-align: center;
+}
+#login > div.account {
+	margin-top: 100px;
+	margin-bottom: 10px;
+	width: 100%;
+	text-align: center;
+}
+#login > div.account > a {
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #5c5c5c;
+	text-align: center;
+ }
+#login > div.account > a:first-child {
+	border-right: 1px solid #7ab6e3;
+}

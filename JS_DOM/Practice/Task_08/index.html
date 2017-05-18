@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/script.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1>Shopping List</h1>
+        <div class="table">
+            <div class="table-row">
+                <div class="table-cell"><strong>items</strong></div>
+                <div class="table-cell"><strong></strong></div>
+                <div class="table-cell"><strong>quantity</strong></div>
+                <div class="table-cell"><strong>price</strong></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell first-cell">
+                    <img src="assets/img/oranges.png">
+                </div>
+                <div class="table-cell second-cell">
+                    <h1>Oranges</h1>
+                    <p>&dollar;0.5 &sol; piece</p>
+                </div>
+                <div class="table-cell third-cell">
+                    <button class="minus-btn"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                    <input class="quantity" type="number" value="1" min="1" />
+                    <button class="plus-btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </div>
+                <div class="table-cell fourth-cell">
+                    <span>&dollar;</span><input type="number" value="0.5" min="1" readonly />
+                    <button><i class="fa fa-times fa-lg" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell first-cell">
+                    <img src="assets/img/salad.png">
+                </div>
+                <div class="table-cell second-cell">
+                    <h1>Lettuce</h1>
+                    <p>&dollar;1 &sol; piece</p>
+                </div>
+                <div class="table-cell third-cell">
+                    <button class="minus-btn"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                    <input class="quantity" type="number" value="1" min="1" />
+                    <button class="plus-btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </div>
+                <div class="table-cell fourth-cell">
+                    <span>&dollar;</span><input type="number" value="1" min="1" readonly />
+                    <button><i class="fa fa-times fa-lg" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell first-cell">
+                    <img src="assets/img/strawberry.png">
+                </div>
+                <div class="table-cell second-cell">
+                    <h1>Strawberries</h1>
+                    <p>&dollar;4 &sol; kg</p>
+                </div>
+                <div class="table-cell third-cell">
+                    <button id="minus" class="minus-btn"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                    <input id="quantity" class="quantity" type="number" value="1" min="1" />
+                    <button id="plus" class="plus-btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </div>
+                <div class="table-cell fourth-cell">
+                    <span>&dollar;</span><input id="price" type="number" value="4" min="1" readonly />
+                    <button><i class="fa fa-times fa-lg" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell first-cell">
+                    <button id="add-item">Add item</button>
+                </div>
+                <div class="table-cell second-cell">
+                    <button id="empty-list">Empty list</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+//     var allPlusBtn = document.getElementsByClassName('plus-btn');
+//     var allMinusBtn = document.getElementsByClassName('minus-btn');
+//     var allInputQuantity = document.getElementsByClassName('quantity');
+//     for(var index = 0; index < allPlusBtn.length; index++) {
+//         allPlusBtn[index].addEventListener('click', addQuantity,false);
+//         // var quantity = allInputQuantity[index];
+       
+//     }
+//   function addQuantity(event) {
+//         for(var index = 0; index < allPlusBtn.length; index++) {
+//         var quantity = allInputQuantity[index];
+//         quantity.value = Number(quantity.value) + 1;
+       
+//     }
+   
+        // price.value = Number(price.value) + Number(price.value);
+    // }
+    var plus = document.getElementById('plus');
+    var minus = document.getElementById('minus');
+    var quantity = document.getElementById('quantity');
+    var price = document.getElementById('price');
+    plus.addEventListener("click",addQuantity);
+    minus.addEventListener("click",removeQuantity);
+    function addQuantity() {
+        quantity.value = Number(quantity.value) + 1;
+        price.value = Number(price.value) + Number(price.value);
+    }
+    function removeQuantity() {
+        var oldPrice = price.value;
+        quantity.value = Number(quantity.value) - 1;
+        price.value = Number(price.value) - Number(price.value);
+    }
+
+</script>
+
+</html>

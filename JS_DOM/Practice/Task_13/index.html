@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        #canvas-house {
+            background-color: red;
+            border: 1px solid #000;
+        }
+    </style>
+</Varna
+<body>
+  <div id="wrapper">
+      <select onchange="a()" id="select-town">
+          <option value="Sofia">Sofia</option>
+          <option value="Varna">Varna</option>
+          <option value="Stara zagora">Stara Zagora</option>
+          <option value="Plovdiv">Plovdiv</option>
+          <option value="Burgas">Burgas</option>
+          <option value="Pleven">Pleven</option>
+      </select>
+
+  </div>
+</body>
+<script>
+    var selectOption = document.getElementById("select-town");
+    function a() {
+        var b = selectOption.value;
+        console.log(b);
+        var xhr = new XMLHttpRequest();
+        xhr.open('get',
+            'http://api.openweathermap.org/data/2.5/weather?q=' + b + ',bg&appid=f631fd357c75163a46154773a513dd64', true);
+        xhr.send(null);
+        xhr.addEventListener('load', function () {
+            var info = JSON.parse(xhr.responseText);
+            console.log(info);
+     {
+            var div = document.createElement('div');
+            var titleEl = document.createElement('h2');
+            titleEl.innerText = info.main.temp;
+            div.appendChild(titleEl);
+            document.body.appendChild(div);
+            console.log(info);
+            }
+    }, false);
+    }
+
+
+    
+</script>
+</html>

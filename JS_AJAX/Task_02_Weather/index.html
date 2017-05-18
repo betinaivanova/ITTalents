@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task - 01 - ID</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/handlebars-v4.0.5.js"></script>
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <select id="cities">
+        <option value="Varna">Varna</option>
+        <option value="Gabrovo">Gabrovo</option>
+        <option value="Sliven">Sliven</option>
+        <option value="Sofia">Sofia</option>
+        <option value="Pernik">Pernik</option>
+    </select>
+    <script id="result-template" type="text/x-handlebars-template">
+            {{#each obj}}
+                    <p> {{ temp }} </span>
+                    <p> {{ weather }} </span>
+                    <img src=" {{ img }}" />
+             {{/each}}
+    </script>
+    <div id="result"></div>
+</body>
+
+</html>
